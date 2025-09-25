@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Garba Night — Celebration</title>
+  <meta name="description" content="Join us for a colorful Garba Night — music, dance, food and fun!" />
+  <style>
+    /* Reset & base */
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.4;color:#111;background: linear-gradient(180deg,#0f172a 0%, #071126 100%);min-height:100vh}
+    a{color:inherit}
+
+    /* Container */
+    .wrap{max-width:1100px;margin:32px auto;padding:24px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border-radius:14px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+
+    header{display:flex;align-items:center;gap:16px}
+    .logo{width:72px;height:72px;border-radius:12px;background:conic-gradient(from 180deg at 50% 50%, #ff7a18, #ff2d95, #6a11cb, #00c9ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px}
+    h1{font-size:28px;color:#fff}
+    p.lead{color:#cbd5e1;margin-top:6px}
+
+    /* CTA row */
+    .row{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:#ff7a18;color:#fff;text-decoration:none;font-weight:600;box-shadow:0 6px 18px rgba(255,122,24,0.18)}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.08);color:#f8fafc}
+
+    /* Grid */
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:20px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr}}
+
+    /* Card styles */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px}
+    .section-title{color:#e6eef8;margin-bottom:10px;font-weight:700}
+
+    /* Schedule */
+    .schedule li{list-style:none;padding:10px;border-bottom:1px dashed rgba(255,255,255,0.04);display:flex;justify-content:space-between}
+    .time{font-weight:700;color:#ffd89b}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .gallery img{width:100%;height:110px;object-fit:cover;border-radius:8px;border:2px solid rgba(255,255,255,0.02)}
+    @media (max-width:540px){.gallery{grid-template-columns:repeat(2,1fr)}.gallery img{height:90px}}
+
+    /* RSVP */
+    form.rsvp{display:flex;flex-direction:column;gap:10px}
+    input,select,textarea{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff}
+    input::placeholder{color:#9ca3af}
+    .small{font-size:13px;color:#9aa7bd}
+
+    footer{margin-top:18px;text-align:center;color:#7091b9;font-size:13px}
+
+    /* Floating decorative */
+    .badge{position:absolute;right:32px;top:32px;background:rgba(255,255,255,0.06);padding:8px 12px;border-radius:999px;color:#fff;font-weight:700}
+
+    /* Simple animation */
+    .pulse{animation:pulse 3s linear infinite}
+    @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.02)}100%{transform:scale(1)}}
+
+    /* Map placeholder */
+    .map{height:220px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(90deg,#071126,#0b1833);color:#9fb7da}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <span class="badge">Sat • 18 Oct 2025</span>
+    <header>
+      <div class="logo">GN</div>
+      <div>
+        <h1>Garba Night — Celebration</h1>
+        <p class="lead">Dance, music and colourful lights. Doors open at 7:00 PM. Family friendly.</p>
+      </div>
+    </header>
+
+    <div class="row">
+      <a href="#rsvp" class="btn">RSVP Now</a>
+      <a href="#tickets" class="btn secondary">Buy Tickets</a>
+      <a href="#schedule" class="btn secondary">View Schedule</a>
+    </div>
+
+    <div class="grid">
+      <main>
+        <section class="card">
+          <h2 class="section-title">About the Night</h2>
+          <p style="color:#cfe7ff">Join us for an unforgettable Garba Night featuring a live DJ, traditional folk performances, a best-dressed competition and delicious street-food stalls. Bring your friends and family — all ages welcome.</p>
+        </section>
+
+        <section id="schedule" class="card" style="margin-top:14px">
+          <h3 class="section-title">Schedule</h3>
+          <ul class="schedule">
+            <li><span>7:00 PM</span><span class="time">Doors Open</span></li>
+            <li><span>7:30 PM</span><span class="time">Warm-up — Folk Garba</span></li>
+            <li><span>8:15 PM</span><span class="time">Live DJ & Dandiya Beats</span></li>
+            <li><span>9:30 PM</span><span class="time">Best Dressed Contest</span></li>
+            <li><span>10:00 PM</span><span class="time">Grand Finale</span></li>
+          </ul>
+        </section>
+
+        <section class="card" style="margin-top:14px">
+          <h3 class="section-title">Photo Gallery</h3>
+          <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1542736667-069246bdbc6d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Garba 1">
+            <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Garba 2">
+            <img src="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Garba 3">
+          </div>
+        </section>
+
+        <section id="tickets" class="card" style="margin-top:14px">
+          <h3 class="section-title">Tickets</h3>
+          <p class="small">General entry: ₹200 • VIP: ₹500 (limited)</p>
+          <div style="margin-top:8px">
+            <button class="btn" onclick="alert('Redirecting to payment (demo)...')">Buy General — ₹200</button>
+            <button class="btn secondary" style="margin-left:8px" onclick="alert('Redirecting to payment (demo)...')">Buy VIP — ₹500</button>
+          </div>
+        </section>
+
+      </main>
+
+      <aside>
+        <div class="card pulse">
+          <h4 class="section-title">Event Details</h4>
+          <p class="small">Venue: Sunrise Community Hall<br>Address: 123 Celebration Road, Citytown</p>
+          <div class="map" style="margin-top:10px">
+            <!-- Replace the following with a Google Maps embed iframe if you want live map -->
+            <div>Map placeholder — add embed here</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h4 class="section-title">RSVP</h4>
+          <form id="rsvp" class="rsvp" onsubmit="handleRSVP(event)">
+            <input type="text" id="name" placeholder="Your full name" required>
+            <input type="tel" id="phone" placeholder="Phone number" required>
+            <select id="ticket-type">
+              <option value="general">General — ₹200</option>
+              <option value="vip">VIP — ₹500</option>
+            </select>
+            <textarea id="notes" placeholder="Any notes (dietary / accessibility)" rows="3"></textarea>
+            <button class="btn" type="submit">Send RSVP</button>
+            <div id="rsvp-result" class="small" style="margin-top:8px;color:#9ee7b0"></div>
+          </form>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h4 class="section-title">Contact</h4>
+          <p class="small">Organiser: Garba Committee • Phone: +91-98765-43210<br>Email: info@garbanight.example</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      © Garba Night • All rights reserved
+    </footer>
+  </div>
+
+  <script>
+    function handleRSVP(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const type = document.getElementById('ticket-type').value;
+      if(!name || !phone){
+        document.getElementById('rsvp-result').textContent = 'Please complete name and phone.';
+        return;
+      }
+      // Demo behaviour: show a confirmation and clear form
+      document.getElementById('rsvp-result').textContent = `Thanks ${name.split(' ')[0]}! We received your RSVP for ${type.toUpperCase()}.`;
+      setTimeout(()=>{
+        document.getElementById('rsvp').reset();
+      },1200);
+
+      // TODO: Replace this with actual form submission (fetch to your backend)
+    }
+
+    // Small convenience: smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (ev)=>{
+        ev.preventDefault();
+        const t = document.querySelector(a.getAttribute('href'));
+        if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
+      })
+    });
+  </script>
+</body>
+</html>
